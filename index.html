@@ -1346,6 +1346,21 @@ body.landscape-mode .tables-container td {
             margin-top: 15px;
             line-height: 1.4;
         }
+        /* ===== VERSION UPDATE GLOW TEXT ===== */
+.version-glow {
+    animation: text-glow 2s ease-in-out infinite !important;
+    font-weight: 700 !important;
+    color: #DC2626 !important;
+}
+
+@keyframes text-glow {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(220, 38, 38, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(220, 38, 38, 1), 0 0 30px rgba(220, 38, 38, 0.5);
+    }
+}
     </style>
 </head>
 <body>
@@ -1368,8 +1383,8 @@ body.landscape-mode .tables-container td {
                     <input type="checkbox" id="toggleVersion" onchange="toggleHelp('version')">
                     <span class="toggle-slider"></span>
                 </label>
-                <label class="help-toggle-label" for="toggleVersion">
-                    <span id="versionLabel">Show</span> Version Updates
+                <label class="help-toggle-label version-glow" for="toggleVersion">
+                    <span id="versionLabel">🔴</span> 1 Update 18/01/26
                 </label>
             </div>
             
